@@ -38,8 +38,7 @@
             padding: 2em; 
             background-color: white; 
         }
-        /* ENDE LAYOUT-STRUKTUR */
-
+        
         h2, h3, h4 { color: #003366; margin-top: 1.5em; }
         .breadcrumb { font-size: 0.9em; color: #666; margin-bottom: 1em; }
         
@@ -56,8 +55,52 @@
         .toc li { margin-bottom: 0.5em; }
         
         img { max-width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 1em; }
+        img[onclick]:hover { cursor: pointer; border-color: #003366; } /* Visueller Hinweis, dass Bild klickbar ist */
         table.wikitable { width: 100%; border-collapse: collapse; margin-bottom: 2em; }
         table.wikitable td { border: 1px solid #ccc; padding: 1em; vertical-align: top; }
+
+        /* LIGHTBOX/MODAL WINDOW STYLES */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 50px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-content {  
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0.1)} 
+            to {transform:scale(1)}
+        }
+        .close-lightbox {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close-lightbox:hover,
+        .close-lightbox:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -94,9 +137,6 @@
                 </ul>
             </div>
             
-            <p></p>
-            <p></p>
-
             <h3 id='am-feldchen'>Am Feldchen</h3>
             <h3 id='historische-namen'>Historische Namen</h3>
             <p>Kleine Feldstraße, Über das Kleine Feld</p>
@@ -105,34 +145,41 @@
             <table class='wikitable' style='width:100%;'>
                 <tr>
                     <td><h4 id='zeitungsartikel'>Zeitungsartikel</h4></td>
-                    <td><a href="Bilder/mvz-artikel.jpg" target="_blank"><img src="Bilder/mvz-artikel.jpg" alt="Historischer Artikel zur MVZ, 1959" width="250"></a></td>
+                    <td><img src="Bilder/mvz-artikel.jpg" alt="Historischer Artikel zur MVZ, 1959" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td><h4 id='1935-mit-blickrichtung-wagnerstraße'>1935 mit Blickrichtung Wagnerstraße</h4></td>
-                    <td><a href="Bilder/am_feldchen1.jpg" target="_blank"><img src="Bilder/am_feldchen1.jpg" alt="Am Feldchen 1935" width="250"></a></td>
+                    <td><img src="Bilder/am_feldchen1.jpg" alt="Am Feldchen 1935" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td><h4 id='1940-mit-blickrichtung-dienstagsmarkt'>1940 mit Blickrichtung Dienstagsmarkt</h4></td>
-                    <td><a href="Bilder/am_feldchen2.jpg" target="_blank"><img src="Bilder/am_feldchen2.jpg" alt="Am Feldchen 1940" width="250"></a></td>
+                    <td><img src="Bilder/am_feldchen2.jpg" alt="Am Feldchen 1940" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td><h4 id='am-feldchen-2023'>Am Feldchen 2023</h4></td>
-                    <td><a href="Bilder/am_feldchen3.jpg" target="_blank"><img src="Bilder/am_feldchen3.jpg" alt="Am Feldchen 2023" width="250"></a></td>
+                    <td><img src="Bilder/am_feldchen3.jpg" alt="Am Feldchen 2023" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td>
                         <h4 id='merziger-tafel'>Merziger Tafel</h4>
                         <p>Auch die Räumlichkeiten der Merziger Tafel befinden sich im Feldchen (Gelände ehemalige Schreinerei Zenner)</p>
                     </td>
-                    <td><a href="Bilder/am_feldchen4.jpg" target="_blank"><img src="Bilder/am_feldchen4.jpg" alt="Merziger Tafel im Feldchen" width="250"></a></td>
+                    <td><img src="Bilder/am_feldchen4.jpg" alt="Merziger Tafel im Feldchen" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td><h4 id='ehemaliges-radiogeschäft-bünemann-im-feldchen--2021-'>Ehemaliges Radiogeschäft Bünemann im Feldchen (2021)</h4></td>
-                    <td><a href="Bilder/am_feldchen5.jpg" target="_blank"><img src="Bilder/am_feldchen5.jpg" alt="Ehemaliges Radiogeschäft Bünemann (2021)" width="250"></a></td>
+                    <td><img src="Bilder/am_feldchen5.jpg" alt="Ehemaliges Radiogeschäft Bünemann (2021)" width="250" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td><h3 id='kartenausschnitt--am-feldchen'>Kartenausschnitt: Am Feldchen</h3></td>
-                    <td><a href="Bilder/am_feldchen_karte.jpg" target="_blank"><img src="Bilder/am_feldchen_karte.jpg" alt="Kartenausschnitt Am Feldchen" width="500"></a></td>
+                    <td><img src="Bilder/am_feldchen_karte.jpg" alt="Kartenausschnitt Am Feldchen" width="500" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
                 <tr>
                     <td>
@@ -140,13 +187,39 @@
                         <h4 id='schreinerei-und-holzlagerplatz-zenner'>Schreinerei und Holzlagerplatz Zenner</h4>
                         <p>Im alten Feldchen befand sich die Schreinerei und der Holzlagerplatz Peter Zenner (später Gebrüder Zenner). Der zugehörige Verkaufsladen stand an der Hochwaldstraße.</p>
                     </td>
-                    <td><a href="Bilder/am_feldchen_sonstiges.jpg" target="_blank"><img src="Bilder/am_feldchen_sonstiges.jpg" alt="Schreinerei Zenner" width="300"></a></td>
+                    <td><img src="Bilder/am_feldchen_sonstiges.jpg" alt="Schreinerei Zenner" width="300" 
+                             onclick="openLightbox(this.src)"></td>
                 </tr>
             </table>
         </main>
     </div>
-    </body>
+    <div id="imageModal" class="modal">
+        <span class="close-lightbox">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("img01");
+        var span = document.getElementsByClassName("close-lightbox")[0];
+
+        // Funktion zum Öffnen des Modals beim Klick auf ein Bild
+        function openLightbox(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        // Funktion zum Schließen des Modals beim Klick auf das X
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // Schließen beim Klick auf das schwarze Overlay
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
 </html>
-
-
-
