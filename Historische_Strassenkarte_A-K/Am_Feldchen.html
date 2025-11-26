@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Am Feldchen – Historische Straßenkarte Merzig</title>
     <style>
-        /* NEUES CSS FÜR ZWEI-SPALTEN-LAYOUT */
+        /* CSS FÜR ZWEI-SPALTEN-LAYOUT UND 90% BREITE */
         body { 
             font-family: Arial, sans-serif; 
             margin: 0; 
@@ -16,16 +16,16 @@
             padding: 1em; 
             text-align: center; 
         }
-        /* Flexbox-Container hält NAV und MAIN nebeneinander */
+        /* Flexbox-Container mit 90% Seitenbreite */
         .container {
             display: flex; 
-            max-width: 90%; /* Optionale maximale Breite */
+            max-width: 90%; 
             margin: 0 auto;
         }
         nav { 
             background-color: #e0e0e0; 
             padding: 1em; 
-            width: 200px; /* Breite der linken Navigationsspalte */
+            width: 200px; 
             flex-shrink: 0; 
             min-height: 100vh; 
             box-sizing: border-box; 
@@ -34,11 +34,11 @@
         nav li { margin-bottom: 0.5em; }
         
         main { 
-            flex-grow: 1; /* Nimmt den restlichen Platz ein */
+            flex-grow: 1; 
             padding: 2em; 
             background-color: white; 
         }
-        /* ENDE NEUES LAYOUT */
+        /* ENDE LAYOUT-STRUKTUR */
 
         h2, h3, h4 { color: #003366; margin-top: 1.5em; }
         .breadcrumb { font-size: 0.9em; color: #666; margin-bottom: 1em; }
@@ -82,9 +82,16 @@
                     <li><a href='#am-feldchen'>1&nbsp;&nbsp;Am Feldchen</a></li>
                     <li><a href='#historische-namen'>2&nbsp;&nbsp;Historische Namen</a></li>
                     <li><a href='#historische-und-neuere-ansichten'>3&nbsp;&nbsp;Historische und neuere Ansichten</a></li>
-                    <li><a href='#zeitungsartikel'>4.1&nbsp;&nbsp;Zeitungsartikel</a></li>
-                    <li><a href='#1935-mit-blickrichtung-wagnerstraße'>4.2&nbsp;&nbsp;1935 mit Blickrichtung Wagnerstraße</a></li>
-                    </ul>
+                    
+                    <li><a href='#zeitungsartikel'>3.1&nbsp;&nbsp;Zeitungsartikel</a></li>
+                    <li><a href='#1935-mit-blickrichtung-wagnerstraße'>3.2&nbsp;&nbsp;1935 mit Blickrichtung Wagnerstraße</a></li>
+                    <li><a href='#1940-mit-blickrichtung-dienstagsmarkt'>3.3&nbsp;&nbsp;1940 mit Blickrichtung Dienstagsmarkt</a></li>
+                    <li><a href='#am-feldchen-2023'>3.4&nbsp;&nbsp;Am Feldchen 2023</a></li>
+                    <li><a href='#merziger-tafel'>3.5&nbsp;&nbsp;Merziger Tafel</a></li>
+                    <li><a href='#ehemaliges-radiogeschäft-bünemann-im-feldchen--2021-'>3.6&nbsp;&nbsp;Ehemaliges Radiogeschäft Bünemann im Feldchen (2021)</a></li>
+                    <li><a href='#kartenausschnitt--am-feldchen'>4&nbsp;&nbsp;Kartenausschnitt: Am Feldchen</a></li>
+                    <li><a href='#schreinerei-und-holzlagerplatz-zenner'>5.1&nbsp;&nbsp;Schreinerei und Holzlagerplatz Zenner</a></li>
+                </ul>
             </div>
             
             <h3 id='am-feldchen'>Am Feldchen</h3>
@@ -95,34 +102,34 @@
             <table class='wikitable' style='width:100%;'>
                 <tr>
                     <td><h4 id='zeitungsartikel'>Zeitungsartikel</h4></td>
-                    <td><img src="Bilder/mvz-artikel.jpg" alt="Historischer Artikel zur MVZ, 1959" width="250"></td>
+                    <td><a href="Bilder/ArtikelMVZ1959.jpg" target="_blank"><img src="Bilder/ArtikelMVZ1959.jpg" alt="Historischer Artikel zur MVZ, 1959" width="250"></a></td>
                 </tr>
                 <tr>
                     <td><h4 id='1935-mit-blickrichtung-wagnerstraße'>1935 mit Blickrichtung Wagnerstraße</h4></td>
-                    <td><img src="Bilder/am_feldchen1.jpg" alt="Am Feldchen 1935" width="250"></td>
+                    <td><a href="Bilder/am_feldchen1.jpg" target="_blank"><img src="Bilder/am_feldchen1.jpg" alt="Am Feldchen 1935" width="250"></a></td>
                 </tr>
                 <tr>
                     <td><h4 id='1940-mit-blickrichtung-dienstagsmarkt'>1940 mit Blickrichtung Dienstagsmarkt</h4></td>
-                    <td><img src="Bilder/am_feldchen2.jpg" alt="Am Feldchen 1940" width="250"></td>
+                    <td><a href="Bilder/am_feldchen2.jpg" target="_blank"><img src="Bilder/am_feldchen2.jpg" alt="Am Feldchen 1940" width="250"></a></td>
                 </tr>
                 <tr>
                     <td><h4 id='am-feldchen-2023'>Am Feldchen 2023</h4></td>
-                    <td><img src="Bilder/am_feldchen3.jpg" alt="Am Feldchen 2023" width="250"></td>
+                    <td><a href="Bilder/am_feldchen3.jpg" target="_blank"><img src="Bilder/am_feldchen3.jpg" alt="Am Feldchen 2023" width="250"></a></td>
                 </tr>
                 <tr>
                     <td>
                         <h4 id='merziger-tafel'>Merziger Tafel</h4>
                         <p>Auch die Räumlichkeiten der Merziger Tafel befinden sich im Feldchen (Gelände ehemalige Schreinerei Zenner)</p>
                     </td>
-                    <td><img src="Bilder/am_feldchen4.jpg" alt="Merziger Tafel im Feldchen" width="250"></td>
+                    <td><a href="Bilder/am_feldchen4.jpg" target="_blank"><img src="Bilder/am_feldchen4.jpg" alt="Merziger Tafel im Feldchen" width="250"></a></td>
                 </tr>
                 <tr>
                     <td><h4 id='ehemaliges-radiogeschäft-bünemann-im-feldchen--2021-'>Ehemaliges Radiogeschäft Bünemann im Feldchen (2021)</h4></td>
-                    <td><img src="Bilder/am_feldchen5.jpg" alt="Ehemaliges Radiogeschäft Bünemann (2021)" width="250"></td>
+                    <td><a href="Bilder/am_feldchen5.jpg" target="_blank"><img src="Bilder/am_feldchen5.jpg" alt="Ehemaliges Radiogeschäft Bünemann (2021)" width="250"></a></td>
                 </tr>
                 <tr>
                     <td><h3 id='kartenausschnitt--am-feldchen'>Kartenausschnitt: Am Feldchen</h3></td>
-                    <td><img src="Bilder/am_feldchen_karte.jpg" alt="Kartenausschnitt Am Feldchen" width="500"></td>
+                    <td><a href="Bilder/am_feldchen_karte.jpg" target="_blank"><img src="Bilder/am_feldchen_karte.jpg" alt="Kartenausschnitt Am Feldchen" width="500"></a></td>
                 </tr>
                 <tr>
                     <td>
@@ -130,17 +137,10 @@
                         <h4 id='schreinerei-und-holzlagerplatz-zenner'>Schreinerei und Holzlagerplatz Zenner</h4>
                         <p>Im alten Feldchen befand sich die Schreinerei und der Holzlagerplatz Peter Zenner (später Gebrüder Zenner). Der zugehörige Verkaufsladen stand an der Hochwaldstraße.</p>
                     </td>
-                    <td><img src="Bilder/am_feldchen_sonstiges.jpg" alt="Schreinerei Zenner" width="300"></td>
+                    <td><a href="Bilder/am_feldchen_sonstiges.jpg" target="_blank"><img src="Bilder/am_feldchen_sonstiges.jpg" alt="Schreinerei Zenner" width="300"></a></td>
                 </tr>
             </table>
         </main>
     </div>
     </body>
 </html>
-
-
-
-
-
-
-
