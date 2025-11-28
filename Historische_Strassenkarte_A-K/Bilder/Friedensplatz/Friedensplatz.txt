@@ -1,0 +1,12 @@
+Friedensplatz.html:
+friedensplatz1.jpg
+friedensplatz2.jpg
+spalte.jpg
+friedensplatz3.jpg
+Friedensplatz.jpg
+---
+Friedensplatz1.jpg
+Friedensplatz2.jpg
+Friedensplatz_3_spalte.jpg
+Friedensplatz3.jpg
+KarteFriedensplatz.jpg

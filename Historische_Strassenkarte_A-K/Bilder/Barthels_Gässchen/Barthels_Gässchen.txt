@@ -1,0 +1,11 @@
+Barthels_Gässchen.html:
+barthels1.png
+barthels3.png
+barthels4.png
+Barthelsgässchen.jpg
+
+----
+Barthels1.png
+Barthels3.png
+Barthels4.png
+KarteBarthelsgässchen.jpg

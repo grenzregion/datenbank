@@ -1,0 +1,10 @@
+Brückenstraße.html:
+brückenstr1.jpg
+brückenstr2.jpg
+austauschen.jpg
+Brückengasse.jpg
+---
+Brückenstr1.jpg
+Brückenstr2.jpg
+Brückenstraße_neu_austauschen.jpg
+KarteBrückengasse.jpg

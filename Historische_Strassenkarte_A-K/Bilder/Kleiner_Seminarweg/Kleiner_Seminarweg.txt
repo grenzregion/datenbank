@@ -1,0 +1,10 @@
+Kleiner_Seminarweg.html:
+Kleiner_seminarweg.jpg
+Seminarweg1.jpg
+Seminarweg2.jpg
+Kleiner_Seminarweg.jpg
+---
+MvzArtikelKleiner_seminarweg.jpg
+Kleiner_Seminarweg1.jpg
+Kleiner_Seminarweg2.jpg
+KarteKleiner_Seminarweg.jpg

@@ -1,0 +1,12 @@
+Gustav-Regler-Platz.html:
+gustav-regler-platz1.jpg
+gustav-regler-platz2.jpg
+Gustav6.jpg
+gustav-regler-platz3.jpg
+platz.jpg
+---
+Gustav-regler-platz1.jpg
+Gustav-regler-platz2.jpg
+Gustav6.jpg
+Gustav-regler-platz3.jpg
+KarteGustav_regler_platz.jpg
